@@ -12,6 +12,7 @@ options = {
 def create_page(src,out):
     f = open(src,'r')
     pdfkit.from_file(f, out, options=options)
+    # pdfkit.from_url('http://localhost:63342/Book_Creator/1.html?_ijt=669mj5r322c60tb62t2fno3fhn', out, options=options)
     # pdfkit.from_string(f, out, options=options)
     f.close()
 
