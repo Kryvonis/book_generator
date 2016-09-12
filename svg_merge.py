@@ -12,7 +12,9 @@ def swap_elem(src,elem):
 
     if element:
         # Replaces <gco_CharacterString> text
-        element[0].attrib['href'] = 'data:image/png;base64,{}'.format(encoded_string)
+        for key, value in element[0].attrib.iteritems():
+            if value == 'avatar':
+                element[0].attrib[key] = 'data:image/png;base64,{}'.format(encoded_string[2:-1])
         # Save back to the XML file
         etree.ElementTree(root).write('svg_tmp/2.svg', pretty_print=True)
     print(tree.getroot())
