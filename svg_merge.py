@@ -8,7 +8,7 @@ def swap_elem(src,elem):
     with open(elem, "rb") as image_file:
         encoded_string = str(base64.b64encode(image_file.read()))
     root = tree.getroot()
-    element = root.xpath('//img')
+    element = root.xpath('//image')
 
     if element:
         # Replaces <gco_CharacterString> text
