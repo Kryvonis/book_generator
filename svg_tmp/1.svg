@@ -1,4 +1,8 @@
-<svg xmlns:xlink="http://www.w3.org/1999/xhtml" width="1800" height="600">
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xhtml"
+        width="1800"
+        height="600">
     <defs>
         <!--<style type="text/css">-->
             <!--g{-->
@@ -34,18 +38,25 @@
             <line x1="-2" y1="-42" x2="92" y2="52" style="stroke-width: 3; stroke-linecap: round; stroke: green;"/>
             <line x1="-2" y1="-52" x2="102" y2="52" style="stroke-width: 3; stroke-linecap: round; stroke: green;"/>
         </pattern>
+        <path id="MyPath"
+          d="M 100 200
+             C 200 100 300   0 400 100
+             C 500 200 600 300 700 200
+             C 800 100 900 100 900 100" />
     </defs>
     <rect width="600" height="600" style="fill: rgb(136, 136, 204);"/>
     <rect width="400" height="400" class="r" style="fill: url(&quot;#p1&quot;); opacity: 0.8; mix-blend-mode: color;"/>
     <rect width="400" height="400" x="200" y="200" class="r"
           style="fill: url(&quot;#p2&quot;); opacity: 0.8; mix-blend-mode: color;"/>
-    <text fill="red" x="20" y="20">lol</text>
+    <text fill="Green" x="20" y="20"><textPath xlink:href="#MyPath">
+      We go up, then we go down, then up again
+    </textPath></text>
     <!--<g style="transform: perspective(500px) rotate3d(0,1,0,30deg);" transform="perspective(500px)">-->
     <!--<text fill="Green" font-size="100" x="200" y="200" >LOS ANGELES</text>-->
     <!--</g>-->
 
     <g>
-        <text fill="Green" font-size="100" x="200" y="200">LOS ANGELES</text>
+        <text fill="Green" font-size="100" x="200" y="200" style="font-family: impact">LOS ANGELES</text>
     </g>
     <!--<image height="200px" width="200px" xlink:href="avatar"></image>-->
 </svg>

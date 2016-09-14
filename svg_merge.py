@@ -1,6 +1,6 @@
 from lxml import etree
 import base64
-def swap_elem(src,elem):
+def paste_elem(src, elem):
     # xml = '<a xmlns="test"><b xmlnslns="test"/></a>'
     # root = etree.fromstring(xml)
     with open(src) as f:
