@@ -1,10 +1,12 @@
-import avatar_colorize as ac
-import svg_merge as sm
-import pdf_creation
-ac.image_overlay('image_begin/1.png','255,0,0').save('image_end/1.png')
-sm.paste_elem('svg_tmp/1.svg', 'image_end/1.png')
-pdf_creation.create_page('svg_tmp/1.svg','pdf_end/1.pdf')
-# pdf_creation.create_page('svg_tmp/envelope_coaster.svg','pdf_end/1.pdf')
-# pdf_creation.create_page('1.html','pdf_end/1.pdf')
-# pdf_creation.create_page('test.html','pdf_end/1.pdf')
-# pdf_creation.create_page('svg_tmp/perspective.svg','pdf_end/1.pdf')
+from book_generation import avatar_colorize, pdf_creation, pdf_merger, svg_merge
+
+avatar_colorize.image_overlay('image_begin/1.png', '255,0,0').save('image_end/1.png')
+svg_merge.paste_elem('svg_tmp/1.svg', 'image_end/1.png')
+pdf_creation.create_page('svg_tmp/1.svg', 'pdf_end/1.pdf')
+pdf_merger.merge_pdf('pdf_end/1.pdf','pdf_end/res.pdf')
+
+#avatar 'image_begin/1.png'
+#color  '255,0,0'
+#svg_template 'svg_tmp/1.svg'
+#pdf_pages 'pdf_end/1.pdf'
+#pdf_result 'pdf_end/res.pdf'
