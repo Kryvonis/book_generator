@@ -11,9 +11,8 @@ def merge_pdf(input_pdf,output_pdf):
     # Appending two pdf-pages from two different files
     _input_pdf = PdfFileReader(open(input_pdf,"rb"))
     output.addPage(_input_pdf.getPage(0))
-    output.addPage(_input_pdf.getPage(0))
-    output.addPage(_input_pdf.getPage(0))
-    output.addPage(_input_pdf.getPage(0))
+    # output.addPage(_input_pdf.getPage(0))
+    # output.addPage(_input_pdf.getPage(0))
 
     # Writing all the collected pages to a file
     output.write(open(output_pdf,"wb"))

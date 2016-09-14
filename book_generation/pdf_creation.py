@@ -22,5 +22,6 @@ cover_options = {
 def create_page(src,out,options=page_options):
     f = open(src,'r')
     pdfkit.from_file(f, out, options=options)
+    # pdfkit.from_file(f, out)
     f.close()
 
