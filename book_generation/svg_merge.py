@@ -1,5 +1,7 @@
 from lxml import etree
 import base64
+
+
 def paste_elem(src, elem):
     # xml = '<a xmlns="test"><b xmlnslns="test"/></a>'
     # root = etree.fromstring(xml)
