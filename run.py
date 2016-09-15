@@ -31,3 +31,7 @@ pdf_creation.create_page('svg_tmp/2.svg', 'pdf_end/1.pdf')
 
 # avatar_config
 # type of book
+
+
+
+
