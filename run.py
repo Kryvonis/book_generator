@@ -1,4 +1,7 @@
 from book_generation import avatar_colorize, pdf_creation, pdf_merger, svg_merge
+from book_generation import BookGenerator
+bg = BookGenerator()
+bg.a
 import base64
 avatar_colorize.image_overlay('image_begin/1.png', '255,0,0').save('image_end/1.png')
 svg_merge.paste_elem('svg_tmp/1.svg', 'image_end/1.png')
