@@ -1,16 +1,23 @@
 class BookGenerator:
-    def __init__(self, book_config, book_type):
+    def __init__(self, book_config):
         '''
         Class that describe proces of creation book
-        :param book_config:
-        :param book_type:
+        :param book_config: all config for all book like - cover_type, avatar_config, text_on_pages
         '''
         self._book_config = book_config
-        self._book_type = book_type
 
     def give_book(self):
         '''
         generate pdf book using embedded functions
+        for i in range(page_numbers):
+            1.avatar_generator page 1
+            2.paster_in_svg page 1
+            3.avater_generator page 2
+            4.paster_in_svg page 2
+            5.merger_svg
+            6.generate_pdf_page
+        7.merger_page_pdf
+
         :return: two url for cover_pdf and book_pdf
         '''
         pass
