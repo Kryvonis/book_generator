@@ -1,6 +1,5 @@
 import book_generation.avatar_colorize
 
-
 class BookGenerator:
     def __init__(self, book_config,
                  page_options=None, cover_options=None):
@@ -55,6 +54,8 @@ class BookGenerator:
     def __avatar_generator(self):
         '''
         colorize and merge avatar for one page and save in some file
+        maybe dont need to use pillow cause svg support blending.
+        all i need is to set blend color
         :return: url for generated file in png
         '''
         hair_color = self.__book_config.a_hair_color
@@ -64,8 +65,9 @@ class BookGenerator:
     def __paster_in_svg(self):
         '''
         get all requirements and insert in one page in svg.
-        photos paste in base64
-        delete all files after insertion
+        photos paste using url
+        base64 deprecated
+        delete all files after insertion. not sure about this
         :return: url for generated file in svg
         '''
         pass
@@ -73,13 +75,15 @@ class BookGenerator:
     def __merger_svg(self):
         '''
         use to merge two svg's in one book reversal
+        maybe will not be use cause we have one svg for reversal and all I will need is to generate right url for svg components
+
         :return: url for generated file in svg
         '''
         pass
 
     def __generate_page_pdf(self):
         '''
-        use generated pdf to create one page in pdf format
+        use generated pdf to create one page in pdf format.
         :return: url for generated file in pdf
         '''
         pass
@@ -87,7 +91,7 @@ class BookGenerator:
     def __merger_page_pdf(self):
         '''
         use to merge all pdf pages in one book
-        delete all files after merging
+        delete all files after merging. not sure about deleting
         :return: url for generated file in pdf
         '''
         pass

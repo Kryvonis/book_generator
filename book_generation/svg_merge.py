@@ -1,5 +1,5 @@
 # from lxml import etree
-import base64
+import base64,os
 try:
     from lxml import etree
     print("running with lxml.etree")
@@ -12,8 +12,6 @@ def paste_elem(src, elem):
     # root = etree.fromstring(xml)
     with open(src) as f:
         tree = etree.parse(f)
-    with open(elem, "rb") as image_file:
-        encoded_string = str(base64.b64encode(image_file.read()))
     root = tree.getroot()
     element = tree.xpath('image')
 
@@ -21,7 +19,7 @@ def paste_elem(src, elem):
         # Replaces <gco_CharacterString> text
         for key, value in element[0].attrib.iteritems():
             if value == 'avatar':
-                element[0].attrib[key] = 'data:image/png;base64,{}'.format(encoded_string[2:-1])
+                element[0].attrib[key] = os.path.abspath(elem)
         # Save back to the XML file
-        etree.ElementTree(root).write('svg_tmp/2.svg', pretty_print=True)
+        etree.ElementTree(root).write('svg_tmp/3.svg', pretty_print=True)
         print('OK')
