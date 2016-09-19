@@ -7,10 +7,11 @@ import base64
 # print(os.path.abspath('image_end/1.png'))
 
 
-avatar_colorize.image_overlay('image_begin/1.png', '255,0,0').save('image_end/1.png')
-svg_merge.paste_elem('svg_tmp/1.svg', 'image_end/1.png')
-pdf_creation.create_page('svg_tmp/3.svg', 'pdf_end/1.pdf')
-# pdf_merger.merge_pdf('pdf_end/1.pdf','pdf_end/res.pdf')
+# avatar_colorize.image_overlay('image_begin/1.png', '255,0,0').save('image_end/1.png')
+# svg_merge.paste_elem('svg_tmp/1.svg', 'image_end/1.png')
+# pdf_creation.create_page('svg_tmp/3.svg', 'pdf_end/1.pdf')
+# pdf_creation.create_page('svg_tmp/igostories_illustration_departure_airport.svg', 'pdf_end/1.pdf')
+pdf_merger.merge_pdf('pdf_end/1.pdf','pdf_end/r2es.pdf')
 
 
 #avatar 'image_begin/1.png'

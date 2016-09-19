@@ -10,7 +10,8 @@ def merge_pdf(input_pdf,output_pdf):
     output = PdfFileWriter()
     # Appending two pdf-pages from two different files
     _input_pdf = PdfFileReader(open(input_pdf,"rb"))
-    output.addPage(_input_pdf.getPage(0))
+    for i in range(30):
+        output.addPage(_input_pdf.getPage(0))
     # output.addPage(_input_pdf.getPage(0))
     # output.addPage(_input_pdf.getPage(0))
 
