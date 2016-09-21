@@ -4,10 +4,10 @@ import pdfkit
 page_options = {
     'page-height': '221',
     'page-width': '551',
-    'margin-top': '3',
-    'margin-right': '3',
-    'margin-bottom': '3',
-    'margin-left': '3',
+    'margin-top': '0',
+    'margin-right': '0',
+    'margin-bottom': '0',
+    'margin-left': '0',
     'dpi': '350',
     'user-style-sheet': 'st.css',
 }
